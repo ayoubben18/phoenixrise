@@ -64,7 +64,7 @@ const page = () => {
                         phoenixriseteam@gmail.com
                     </a></div>
             </div>
-            <div className='flex mt-14 gap-3 sm:gap-10'>
+            <div className='flex mt-14 gap-1 xs:gap-3 sm:gap-10'>
                 <NextPrevButton link={'/terms-of-use'} direction={true} name={'Terms Of Use'}/>
                 <NextPrevButton link={'/cookie-policy'} direction={false} name={'Cookie Policy'}/>
             </div>
