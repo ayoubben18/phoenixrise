@@ -2,32 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 212, 26%, 5%; /* Near black with a hint of blue */
+    --foreground: 210, 40%, 98%; /* Bright contrast for text */
+
+    --card: 210, 16%, 15%; /* Very dark grey */
+    --card-foreground: 210, 40%, 98%;
+
+    --popover: 212, 26%, 5%; /* Matching near black background */
+    --popover-foreground: 210, 40%, 98%;
+
+    --primary: 210, 40%, 98%;
+    --primary-foreground: 212, 26%, 5%; /* Near black text on light buttons */
+
+    --secondary: 210, 16%, 15%; /* Very dark grey for secondary elements */
+    --secondary-foreground: 210, 40%, 98%;
+
+    --muted: 210, 16%, 15%; /* Very dark grey for muted text */
+    --muted-foreground: 210, 20%, 50%; /* Slightly lighter for readable muted text */
+
+    --accent: 210, 40%, 98%; /* Accent color kept light for contrast */
+    --accent-foreground: 212, 26%, 5%; /* Near black for text on accent buttons */
+
+    --destructive: 0, 62.8%, 20%; /* Dark red for destructive actions */
+    --destructive-foreground: 210, 40%, 98%;
+
+    --border: 210, 16%, 15%; /* Very dark grey for borders */
+    --input: 210, 16%, 15%; /* Very dark grey for input fields */
+    --ring: 210, 20%, 30%; /* Darker for focus rings but still visible */
+  }
+
+
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.section-style{
+  @apply flex flex-col gap-6 items-center justify-center h-screen tracking-widest
+}
+
+.title-section{
+  @apply text-5xl font-bold text-slate-300 flex gap-3
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg, rgba(67, 75, 80, 0.4) 0%, rgba(255, 255, 255, 0.8) 100%);
   }
+
+
+  .shadow-slate-400 {
+    box-shadow: 0 4px 6px -1px rgba(156, 163, 175, 0.8), 0 2px 4px -2px rgba(156, 163, 175, 0.8);
+    /* Adjust RGBA to match slate-400 and your desired opacity */
+  }
+  .text-shadow-slate-600 {
+    text-shadow: 0 2px 4px rgba(71, 85, 105, 0.6); /* Lightened with reduced opacity */
+  }
+
 }
