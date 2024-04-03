@@ -21,6 +21,14 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        'xs': '450px', // Define the xs breakpoint
+        sm: '640px', // Default, uncomment if you're overriding
+        md: '768px', // Default, uncomment if you're overriding
+        lg: '1024px', // Default, uncomment if you're overriding
+        xl: '1280px', // Default, uncomment if you're overriding
+        '2xl': '1536px', // Default, uncomment if you're overriding
+      },
       boxShadow: {
         input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
       },
@@ -87,7 +95,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"),addVariablesForColors,require('tailwindcss-textshadow')],
+  plugins: [require("tailwindcss-animate"),addVariablesForColors,require('tailwindcss-textshadow'),require("daisyui")],
 } satisfies Config
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));

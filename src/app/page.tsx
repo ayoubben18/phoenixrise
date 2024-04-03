@@ -4,6 +4,7 @@ import {HeroSection} from "@/components/HeroSection";
 import {AboutUs} from "@/components/AboutUs";
 import {Services} from "@/components/Services";
 import {ContactUs} from "@/components/ContactUs";
+import {Footer} from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <AboutUs/>
         <Services />
         <ContactUs/>
+
     </main>
   );
 }

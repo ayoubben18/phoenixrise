@@ -77,9 +77,13 @@
     @apply bg-background text-foreground;
   }
 }
+@keyframes flickerAnimation {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
 
 .section-style{
-  @apply flex flex-col gap-6 items-center justify-center h-screen tracking-widest
+  @apply flex flex-col gap-6 items-center justify-center min-h-screen tracking-widest
 }
 
 .title-section{
@@ -94,11 +98,22 @@
 
 
   .shadow-slate-400 {
-    box-shadow: 0 4px 6px -1px rgba(156, 163, 175, 0.8), 0 2px 4px -2px rgba(156, 163, 175, 0.8);
-    /* Adjust RGBA to match slate-400 and your desired opacity */
+    box-shadow:
+            0 4px 8px -1px rgba(156, 163, 175, 0.9), /* Increase blur radius and opacity */
+            0 2px 6px -2px rgba(156, 163, 175, 0.9), /* More prominent secondary shadow */
+            0 0 0 3px rgba(255, 255, 255, 0.2); /* Add a 'glow' effect */
   }
+
   .text-shadow-slate-600 {
-    text-shadow: 0 2px 4px rgba(71, 85, 105, 0.6); /* Lightened with reduced opacity */
+    text-shadow:
+            0 2px 4px rgba(71, 85, 105, 0.8), /* Darker shadow for depth */
+            0 -1px 2px rgba(255, 255, 255, 0.5); /* Light 'glow' above the text for shine */
   }
+
+  .glowy-bg {
+    filter: drop-shadow(0 35px 60px rgba(156, 163, 175, 0.75));
+    animation: flickerAnimation 3s infinite;
+  }
+
 
 }

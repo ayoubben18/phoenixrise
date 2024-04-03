@@ -16,7 +16,7 @@ function Navbar({ className }: { className?: string }) {
     const [active, setActive] = useState<string | null>(null);
     return (
         <div
-            className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
+            className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50 px-4", className)}
         >
             <Menu setActive={setActive}>
                 <MenuItem setActive={setActive} active={active} item="Services">
@@ -28,7 +28,7 @@ function Navbar({ className }: { className?: string }) {
                     </div>
                 </MenuItem>
                 <MenuItem setActive={setActive} active={active} item="Products">
-                    <div className="  text-sm grid grid-cols-2 gap-10 p-4">
+                    <div className="  text-sm grid grid-cols-1 sm:grid-cols-2 gap-10 p-4">
                         <ProductItem
                             title="Instagram Posts"
                             href="https://algochurn.com"
