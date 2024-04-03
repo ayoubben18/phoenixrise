@@ -12,17 +12,12 @@ export const Footer = () => {
                     <a className="link link-hover">Video Editing</a>
                     <a className="link link-hover">Software Creation</a>
                 </nav>
-                <nav>
-                    <h6 className="footer-title">Company</h6>
-                    <a className="link link-hover">About us</a>
-                    <a className="link link-hover">Contact</a>
 
-                </nav>
                 <nav>
                     <h6 className="footer-title">Legal</h6>
-                    <a className="link link-hover">Terms of use</a>
-                    <a className="link link-hover">Privacy policy</a>
-                    <a className="link link-hover">Cookie policy</a>
+                    <a className="link link-hover" href={'/terms-of-use'}>Terms of use</a>
+                    <a className="link link-hover" href={'/privacy-policy'}>Privacy policy</a>
+                    <a className="link link-hover" href={'/cookie-policy'}>Cookie policy</a>
                 </nav>
             </footer>
             <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
@@ -32,7 +27,7 @@ export const Footer = () => {
                 </aside>
                 <nav className="md:place-self-center md:justify-self-end">
                     <div className="grid grid-flow-col gap-4">
-                        <a>
+                        <a target='_blank' href='https://www.linkedin.com/company/phoenixriseteam/'>
                             <FaLinkedin size={30}/>
                         </a>
                         <a>

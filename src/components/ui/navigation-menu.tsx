@@ -80,16 +80,14 @@ export const Menu = ({
 export const ProductItem = ({
                                 title,
                                 description,
-                                href,
                                 src,
                             }: {
     title: string;
     description: string;
-    href: string;
     src: string;
 }) => {
     return (
-        <Link href={href} className="flex space-x-2">
+        <div  className="flex space-x-2">
             <Image
                 src={src}
                 width={140}
@@ -105,17 +103,27 @@ export const ProductItem = ({
                     {description}
                 </p>
             </div>
-        </Link>
+        </div>
     );
 };
 
 export const HoveredLink = ({ children, ...rest }: any) => {
     return (
-        <Link
+        <Link target='_blank'
             {...rest}
             className="text-neutral-700 dark:text-neutral-200 hover:text-black "
         >
             {children}
         </Link>
+    );
+};
+export const HoveredDiv = ({ children, ...rest }: any) => {
+    return (
+        <div
+            {...rest}
+            className="text-neutral-700 dark:text-neutral-200 hover:text-black "
+        >
+            {children}
+        </div>
     );
 };

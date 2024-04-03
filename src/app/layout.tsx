@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { Roboto } from "@next/font/google"
+import { Roboto } from "next/font/google"
 import "./globals.css";
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider"
 import {Footer} from "@/components/Footer";
+import {Nav} from "@/components/NavigationMenuDemo";
+import { Toaster } from "@/components/ui/toaster"
 
 
 const roboto = Roboto({
@@ -35,8 +37,11 @@ export default function RootLayout({
         enableSystem
         disableTransitionOnChange
     >
+        <Nav/>
         {children}
+
         <Footer/>
+        <Toaster/>
     </ThemeProvider>
     </body>
     </html>

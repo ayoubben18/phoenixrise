@@ -42,6 +42,8 @@
     --card: 210, 16%, 15%; /* Very dark grey */
     --card-foreground: 210, 40%, 98%;
 
+
+
     --popover: 212, 26%, 5%; /* Matching near black background */
     --popover-foreground: 210, 40%, 98%;
 
@@ -79,7 +81,7 @@
 }
 @keyframes flickerAnimation {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+  50% { opacity: 0.8; }
 }
 
 .section-style{
