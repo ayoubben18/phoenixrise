@@ -10,6 +10,10 @@ const roboto = Roboto({
     style: ["normal"],
     subsets:['latin']
 })
+export const metadata: Metadata = {
+    title: "PhoenixRise",
+    description: "Digital Services agency",
+};
 
 export default function RootLayout({
   children,

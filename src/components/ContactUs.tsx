@@ -11,7 +11,7 @@ export const ContactUs = () => {
                 <div className='flex flex-col gap-3 items-center'>
                     <SiGmail size={60}/>
                     <h1>Gmail</h1>
-                    <h2>phoenixriseteam@gmail.com </h2>
+                    <h2>phoenixriseteam@gmail.com</h2>
                 </div>
                 <div className='flex flex-col gap-3 items-center'>
                     <FaLinkedin size={60}/>
