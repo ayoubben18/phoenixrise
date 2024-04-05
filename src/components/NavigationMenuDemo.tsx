@@ -16,7 +16,7 @@ function Navbar({ className }: { className?: string }) {
     const [active, setActive] = useState<string | null>(null);
     return (
         <div
-            className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50 px-4 text-xl px-10", className)}
+            className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50 px-10", className)}
         >
             <Menu setActive={setActive}>
                 <MenuItem setActive={setActive} active={active} item="Services">
@@ -56,6 +56,12 @@ function Navbar({ className }: { className?: string }) {
                         <HoveredLink href="mailto:phoenixriseteam@gmail.com">Email</HoveredLink>
                         <HoveredLink href="https://www.linkedin.com/company/phoenixriseteam/">Linkedin</HoveredLink>
                         <HoveredLink href="/team">Instagram</HoveredLink>
+                    </div>
+                </MenuItem>
+                <MenuItem setActive={setActive} active={active} item="More">
+                    <div className="flex flex-col space-y-4 text-sm">
+                        <HoveredLink href="/pricing">Pricing</HoveredLink>
+
                     </div>
                 </MenuItem>
             </Menu>

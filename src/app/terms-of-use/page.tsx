@@ -6,8 +6,8 @@ import { TracingBeam } from '@/components/ui/tracing-beam';
 
 const page = () => {
     return (
-        <TracingBeam >
-        <div className="py-36 flex flex-col gap-3 container px-20 ">
+        <TracingBeam className='px-2'>
+        <div className="py-36 flex flex-col gap-3 container">
             <div className='flex mb-10'>
                 <NextPrevButton link={'/'} direction={true} name={'Back to Home Page'}/>
             </div>
@@ -46,7 +46,7 @@ const page = () => {
                 our Privacy Policy.</p>
             <h2 className="text-xl font-semibold mt-4">7. Contact Information</h2>
             <p>For any queries or concerns regarding the terms of use or our services, please contact us at:</p>
-            <div className='flex flex-col text-lg sm:text-xl font-medium pt-7'>
+            <div className='flex flex-col text-sm xs:text-lg  sm:text-xl font-medium pt-7'>
                 <Image src='/logo.png' alt='logo' width={70} height={70}/>
                 <h1>PhoenixRise</h1>
                 <a href="https://phoenixrise.agency/"
@@ -57,7 +57,7 @@ const page = () => {
 
                 <p>Phone: +212613506807
                 </p>
-                <div className='flex gap-2'>Email:
+                <div className='flex flex-wrap'>Email:
                     <a href="mailto:phoenixriseteam@gmail.com"
                        className="text-blue-600 visited:text-purple-600">
                         phoenixriseteam@gmail.com
