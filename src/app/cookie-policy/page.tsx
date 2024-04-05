@@ -2,10 +2,12 @@
 import React from 'react';
 import Image from "next/image";
 import {NextPrevButton} from "@/components/NextPrevButton";
+import { TracingBeam } from '@/components/ui/tracing-beam';
 
 const page = () => {
     return (
-        <div className="py-36 flex flex-col gap-3 container px-10 sm:px-36">
+        <TracingBeam >
+        <div className="py-36 flex flex-col gap-3 container px-20">
             <div className='flex left-0 mb-10 gap-3 sm:gap-10'>
                 <NextPrevButton link={'/'} direction={true} name={'Back to Home Page'}/>
             </div>
@@ -71,6 +73,7 @@ const page = () => {
                 <NextPrevButton link={'/privacy-policy'} direction={true} name={'Privacy Policy'}/>
             </div>
         </div>
+        </TracingBeam>
     );
 }
 
