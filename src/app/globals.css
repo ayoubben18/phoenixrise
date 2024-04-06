@@ -85,7 +85,7 @@
 }
 
 .section-style{
-  @apply flex flex-col gap-6 items-center justify-center min-h-screen tracking-widest
+  @apply flex flex-col gap-6 items-center justify-center min-h-screen tracking-widest py-20
 }
 
 .container-text {

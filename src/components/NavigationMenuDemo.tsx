@@ -1,12 +1,13 @@
 "use client";
 import { IoHomeSharp } from "react-icons/io5";
 import React, { useState } from "react";
-import {HoveredDiv, HoveredLink, Menu, MenuItem, ProductItem} from "@/components/ui/navigation-menu";
+import {HoveredDiv, HoveredLink, LogoItem, Menu, MenuItem, ProductItem} from "@/components/ui/navigation-menu";
 import { cn } from "@/utils/cn";
+import {Home} from "lucide-react";
 
 export function Nav() {
     return (
-        <div className="relative w-full flex items-center justify-center ">
+        <div className="sticky w-full flex top-2  items-center justify-center z-50">
             <Navbar className="top-2" />
         </div>
     );
@@ -16,19 +17,22 @@ function Navbar({ className }: { className?: string }) {
     const [active, setActive] = useState<string | null>(null);
     return (
         <div
-            className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50 px-10", className)}
+            className={cn("top-10 inset-x-0 max-w-2xl mx-auto px-1 xs:px-10", className)}
         >
-            <Menu setActive={setActive}>
+            <Menu setActive={setActive} >
+                <LogoItem logo={<Home size={20} />}/>
                 <MenuItem setActive={setActive} active={active} item="Services">
                     <div className="flex flex-col space-y-4 text-sm">
+
                         <HoveredLink href='/services/web-dev'>Web Development</HoveredLink>
                         <HoveredDiv>Graphic Design</HoveredDiv>
                         <HoveredDiv >Video Editing</HoveredDiv>
                         <HoveredDiv >Software Creation</HoveredDiv>
+                        <HoveredLink href="/pricing">Pricing</HoveredLink>
                     </div>
                 </MenuItem>
                 <MenuItem setActive={setActive} active={active} item="Products">
-                    <div className="text-sm grid grid-cols-1 sm:grid-cols-2 gap-10 p-4">
+                    <div className="text-sm grid grid-cols-1 md:grid-cols-2 gap-10 p-4">
                         <ProductItem
                             title="Instagram Posts"
                             src="https://assets.aceternity.com/demos/algochurn.webp"
@@ -58,12 +62,7 @@ function Navbar({ className }: { className?: string }) {
                         <HoveredLink href="/team">Instagram</HoveredLink>
                     </div>
                 </MenuItem>
-                <MenuItem setActive={setActive} active={active} item="More">
-                    <div className="flex flex-col space-y-4 text-sm">
-                        <HoveredLink href="/pricing">Pricing</HoveredLink>
 
-                    </div>
-                </MenuItem>
             </Menu>
         </div>
     );

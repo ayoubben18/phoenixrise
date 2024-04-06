@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="dark">
     <body
         className={cn(
             "min-h-screen bg-background antialiased",
@@ -37,7 +37,7 @@ export default function RootLayout({
         enableSystem
         disableTransitionOnChange
     >
-        <Nav/>
+        <Nav />
         {children}
         <Footer/>
         <Toaster/>

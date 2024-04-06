@@ -21,14 +21,14 @@ export const MenuItem = ({
                          }: {
     setActive: (item: string) => void;
     active: string | null;
-    item: string;
+    item: string ;
     children?: React.ReactNode;
 }) => {
     return (
         <div onMouseEnter={() => setActive(item)} className="relative ">
             <motion.p
                 transition={{ duration: 0.3 }}
-                className="cursor-pointer text-sm xs:text-lg hover:opacity-[0.9] text-white"
+                className="cursor-pointer text-sm sm:text-lg hover:opacity-[0.9] text-white"
             >
                 {item}
             </motion.p>
@@ -59,7 +59,28 @@ export const MenuItem = ({
         </div>
     );
 };
+export const LogoItem = ({
+                             logo
+                         }: {
+    setActive?: (item: string) => void;
+    active?: string | null;
+    item?: string ;
+    logo:React.ReactNode
+    children?: React.ReactNode;
+}) => {
+    return (
+        <div  >
+            <motion.div 
+                transition={{ duration: 0.3 }}
+                className="cursor-pointer mt-[-2px] hover:opacity-[0.9] text-white"
+            >
+                <Link href='/' >{logo}</Link>
+            </motion.div>
 
+
+        </div>
+    );
+};
 export const Menu = ({
                          setActive,
                          children,
@@ -70,7 +91,7 @@ export const Menu = ({
     return (
         <nav
             onMouseLeave={() => setActive(null)} // resets the state
-            className="relative rounded-full boder border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 py-6 "
+            className="relative rounded-full items-center boder border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 py-6 "
         >
             {children}
         </nav>
