@@ -13,6 +13,7 @@ const roboto = Roboto({
   subsets: ["latin"],
 });
 export const metadata: Metadata = {
+  metadataBase: new URL("https://phoenixrise.agency/"),
   title: {
     default: "PhoenixRise",
     template: "%s | PhoenixRise",
@@ -20,6 +21,9 @@ export const metadata: Metadata = {
   description: "Digital Services agency",
   twitter: {
     card: "summary_large_image",
+  },
+  openGraph: {
+    images: "/og-image.png",
   },
 };
 
