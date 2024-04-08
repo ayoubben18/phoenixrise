@@ -59,7 +59,7 @@ export default function GetStartedWithPhoenixRise() {
     setLoading(false);
   };
   return (
-    <div className="flex w-full py-20 px-2 sm:px-10">
+    <div className="flex w-full py-20 px-2 sm:px-10" id="getstarted">
       <div className="mx-auto max-w-3xl w-full px-4">
         <div className="space-y-2">
           <h2 className="text-4xl font-bold">
@@ -83,20 +83,6 @@ export default function GetStartedWithPhoenixRise() {
             <p className="text-gray-500">
               Learn how we propel brands from concept to conquest in the digital
               realm.
-            </p>
-          </div>
-          <div className="space-y-1">
-            <h3 className="text-xl font-bold">Our Success Stories</h3>
-            <p className="text-gray-500">
-              Discover how we've transformed businesses with our digital
-              innovation.
-            </p>
-          </div>
-          <div className="space-y-1">
-            <h3 className="text-xl font-bold">Engage With Our Content</h3>
-            <p className="text-gray-500">
-              Dive into our engaging content and see how we connect with
-              audiences.
             </p>
           </div>
           <div className="space-y-1">

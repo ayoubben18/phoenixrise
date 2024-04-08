@@ -83,6 +83,9 @@
   0%, 100% { opacity: 1; }
   50% { opacity: 0.8; }
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .section-style{
   @apply flex flex-col gap-6 items-center justify-center min-h-screen tracking-widest py-20

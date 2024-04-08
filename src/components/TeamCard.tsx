@@ -10,7 +10,7 @@ interface Props {
 
 const TeamCard = ({ image, name, description, role }: Props) => {
   return (
-    <Card className="w-[350px] bg-[#151e26] text-white rounded-lg">
+    <Card className="w-[250px] xs:w-[350px] bg-[#151e26] text-white rounded-lg">
       <CardContent>
         <div className="flex items-center space-x-4 p-4">
           <Avatar>

@@ -5,6 +5,7 @@ import Identity from "@/components/Identity";
 import GetStarted from "@/components/GetStarted";
 import AboutUs from "@/components/AboutUs";
 import Services from "@/components/Services";
+import Faq from "@/components/Faq";
 
 export default function Home() {
   return (
@@ -21,9 +22,8 @@ export default function Home() {
         <AboutUs />
       </div>
       <GetStarted />
-
       <div className=" bg-[#11181e] w-full flex justify-center items-center">
-        <ContactUs />
+        <Faq />
       </div>
     </main>
   );

@@ -3,7 +3,9 @@
  * @see https://v0.dev/t/qU5Zbz6MJ2T
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
-import Link from "next/link";
+"use client";
+
+import { SmoothScrollLink } from "./SmoothScroll";
 
 export default function Services() {
   return (
@@ -18,12 +20,12 @@ export default function Services() {
           </p>
         </div>
         <div className="grid gap-4 md:gap-2 lg:justify-self-end">
-          <Link
-            className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white shadow-sm text-sm font-medium px-4 transition-colors hover:bg-gray-100 hover:text-gray-900 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50"
-            href="#contact-us"
+          <SmoothScrollLink
+            className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 bg-white shadow-sm text-sm font-medium px-4 transition-colors hover:bg-gray-100 hover:text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50"
+            href="#getstarted"
           >
-            Contact Us
-          </Link>
+            Get started
+          </SmoothScrollLink>
         </div>
       </div>
       <div className="container grid max-w-5xl items-start gap-6 px-4 py-8 md:py-12 lg:py-16 md:gap-8 grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:max-w-6xl">
