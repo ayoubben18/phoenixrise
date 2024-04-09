@@ -157,13 +157,16 @@ const HeroSection: React.FC = () => {
   return (
     <section className="w-full z-10 min-h-[70vh] px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
       <div>
-        <h3 className="text-5xl md:text-6xl lg:text-7xl font-semibold">
+        <span className=" text-sm text-slate-400">
+          PhoenixRise - From concept to conquest
+        </span>
+        <h3 className="text-5xl md:text-6xl lg:text-7xl font-semibold mt-2">
           Let's Bring Your ideas to Life
         </h3>
         <p className="text-base md:text-lg text-slate-500 my-4 md:my-6">
-          At PhoenixRise, we specialize in leveraging the power of striking web
-          design and captivating social media content to drive businesses
-          towards greatness.
+          Step into our digital haven, where captivating experiences and
+          amplified online presence await. Elevate your brand effortlessly with
+          our comprehensive solutions.
         </p>
 
         <SmoothScrollLink
