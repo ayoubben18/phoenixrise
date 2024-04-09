@@ -15,9 +15,6 @@ export default function Services() {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
             Services
           </h2>
-          <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-            We offer a variety of services to meet your needs.
-          </p>
         </div>
         <div className="grid gap-4 md:gap-2 lg:justify-self-end">
           <SmoothScrollLink

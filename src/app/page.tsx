@@ -1,4 +1,3 @@
-import { ContactUs } from "@/components/ContactUs";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import HeroSection from "@/components/HeroSection";
 import Identity from "@/components/Identity";
@@ -6,6 +5,7 @@ import GetStarted from "@/components/GetStarted";
 import AboutUs from "@/components/AboutUs";
 import Services from "@/components/Services";
 import Faq from "@/components/Faq";
+import ConnectWithUs from "@/components/CoonectWithUs";
 
 export default function Home() {
   return (
@@ -25,6 +25,7 @@ export default function Home() {
       <div className=" bg-[#11181e] w-full flex justify-center items-center">
         <Faq />
       </div>
+      <ConnectWithUs />
     </main>
   );
 }

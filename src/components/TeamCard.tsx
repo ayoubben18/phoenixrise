@@ -23,10 +23,7 @@ const TeamCard = ({ image, name, description, role }: Props) => {
           </div>
         </div>
         <div className="px-4 pb-4 text-start">
-          <p className="text-sm mb-2">
-            Frontend developer and UI/UX enthusiast. Join me on this coding
-            adventure!
-          </p>
+          <p className="text-sm mb-2">{description}</p>
           <p className="text-sm mb-4">#PhoenixRise</p>
         </div>
       </CardContent>

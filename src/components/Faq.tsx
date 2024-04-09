@@ -25,12 +25,14 @@ export default function Component() {
           <div className="space-y-2 text-lg sm:text-xl">
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
-                <AccordionTrigger>Is it For Individuals?</AccordionTrigger>
+                <AccordionTrigger>
+                  Do we offer single services ?
+                </AccordionTrigger>
                 <AccordionContent>
-                  Yes. PhoenixRise Provide services for individuals you can take
-                  a look at our{" "}
-                  <span className="badge badge-neutral">/pricing</span> page or
-                  contact us for more information.
+                  Yes we do, you can ask for any service from the list above,
+                  however we do offer special discounts to clients who demand a
+                  pack of services. you can take a look at our{" "}
+                  <span className="badge badge-neutral">/pricing</span> page.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
@@ -42,10 +44,39 @@ export default function Component() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger>How to contact?</AccordionTrigger>
+                <AccordionTrigger>
+                  Is there an all-in-one digital services pack ?
+                </AccordionTrigger>
                 <AccordionContent>
-                  You can visit our linkedin instagram or email or even the
-                  provided number in the contact us section.
+                  Yes indeed ! In PhoenixRise we mainly target small businesses
+                  and startups who want to leave their footprint out there, and
+                  we do understand the hardship that comes with this mission so
+                  we offer a package of all our services with a DISCOUNT !
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <AccordionTrigger>Another question ?</AccordionTrigger>
+                <AccordionContent>
+                  You can contact us through:
+                  <br />- Email address:
+                  <a
+                    target="_blank"
+                    href="mailto:phoenixriseteam@gmail"
+                    className="link text-slate-300 ml-1"
+                  >
+                    phoenixriseteam@gmail.com
+                  </a>
+                  <br />
+                  - Phone number: +212613506807
+                  <br />- Linkedin:{" "}
+                  <a
+                    className="text-slate-300 ml-1"
+                    target="_blank"
+                    href="https://www.linkedin.com/company/phoenixriseteam/about/"
+                  >
+                    phoenixriseteam
+                  </a>
+                  <br />- Or fill out the form above.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>

@@ -6,7 +6,7 @@ const Identity = () => {
     <div className="min-h-[70vh] flex flex-col gap-10 justify-center py-20 px-10">
       <div className="flex flex-col items-start justify-start gap-3">
         <h1 className="text-6xl font-bold">What we do.</h1>
-        <p className="text-lg">We specialize in the digital realm </p>
+        <p className="text-lg">In PhoenixRise, We Digitalize Ideas via: </p>
       </div>
       <div className="flex flex-wrap items-start gap-10 w-full text-start">
         <div className="flex flex-col items-start gap-3 max-w-[300px]">

@@ -8,13 +8,13 @@ const AboutUs = () => {
         image="/ayoub.jpg"
         name="Ayoub Bensalah"
         role="Founder"
-        description="Ayoub is a software engineer and founder of PhoenixRise."
+        description="Ayoub is a software engineer, a graphic designer, and founder of PhoenixRise. Responsible for project management. "
       />
       <TeamCard
         image="/houda.jpg"
         name="Houda Boussaid"
         role="Co-Founder"
-        description="Houda is a software engineer and founder of PhoenixRise."
+        description="Houda is a frontend engineer and co-founder of PhoenixRise. Responsible for communication and sales."
       />
     </div>
   );

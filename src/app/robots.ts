@@ -5,13 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: [
-        "/404",
-        "/terms-of-use",
-        "/cookie-policy",
-        "/privacy-policy",
-        "/services/*",
-      ],
+      disallow: ["/404", "/services/*"],
     },
     sitemap: "https://phoenixrise.agency/sitemap.xml",
   };
