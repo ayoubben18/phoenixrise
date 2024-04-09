@@ -18,18 +18,15 @@ export const Footer = () => {
 
         <nav>
           <h6 className="footer-title">Legal</h6>
-          <DragCloseDrawerExample
-            name="Terms of use"
-            children={<TermsOfUse />}
-          />
-          <DragCloseDrawerExample
-            name="Privacy Policy"
-            children={<PrivacyPolicy />}
-          />
-          <DragCloseDrawerExample
-            name="Cookie Policy"
-            children={<CookiePolicy />}
-          />
+          <DragCloseDrawerExample name="Terms of use">
+            <TermsOfUse />
+          </DragCloseDrawerExample>
+          <DragCloseDrawerExample name="Privacy Policy">
+            <PrivacyPolicy />
+          </DragCloseDrawerExample>
+          <DragCloseDrawerExample name="Cookie Policy">
+            <CookiePolicy />
+          </DragCloseDrawerExample>
         </nav>
       </footer>
       <footer className="footer px-10 z-50 py-4 border-t bg-base-200 text-base-content border-base-300">
