@@ -1,9 +1,4 @@
 // pages/terms-of-use.js
-import React from "react";
-import Image from "next/image";
-import { NextPrevButton } from "@/components/NextPrevButton";
-import { TracingBeam } from "@/components/ui/tracing-beam";
-import { Metadata } from "next";
 
 const PrivacyPolicy = () => {
   return (
