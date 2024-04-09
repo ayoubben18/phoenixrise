@@ -6,7 +6,7 @@ import PrivacyPolicy from "./PrivacyPolicy";
 import CookiePolicy from "./CookiePolicy";
 export const Footer = () => {
   return (
-    <div className="z-50 absolute w-full">
+    <div className="z-40 absolute w-full">
       <footer className="footer z-50 p-10 bg-base-200 text-base-content">
         <nav>
           <h6 className="footer-title">Services</h6>
