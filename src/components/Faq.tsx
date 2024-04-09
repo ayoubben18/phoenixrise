@@ -72,7 +72,7 @@ export default function Component() {
                   <a
                     className="text-slate-300 ml-1"
                     target="_blank"
-                    href="https://www.linkedin.com/company/phoenixriseteam/about/"
+                    href="https://www.instagram.com/phoenixrise.team/"
                   >
                     phoenixriseteam
                   </a>
