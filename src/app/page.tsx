@@ -14,7 +14,7 @@ export default function Home() {
         <HeroSection />
         <BackgroundBeams className="absolute bottom-0" />
       </div>
-      <div className=" bg-[#11181e] w-full flex justify-center items-center">
+      <div className=" bg-[#F7FBFC] w-full flex justify-center items-center">
         <Identity />
       </div>
       <Services />

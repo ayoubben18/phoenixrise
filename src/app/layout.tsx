@@ -4,7 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Footer } from "@/components/Footer";
-import { Nav } from "@/components/NavigationMenuDemo";
+import { NavigationMenuDemo, Nav } from "@/components/NavigationMenuDemo";
 import { Toaster } from "@/components/ui/toaster";
 
 const roboto = Roboto({

@@ -9,20 +9,12 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <div className="section-style ">
-      <h1 className="font-bold items-center text-slate-300 flex gap-3 text-4xl">
+      <h1 className="font-bold items-center text-slate-100 flex gap-3 text-4xl">
         Pricing <CircleDollarSign size={40} />
       </h1>
       <div className="flex md:flex-row flex-col items-center gap-4">
-        <PricingCard
-          color="bg-slate-500"
-          className="border-4 border-slate-500"
-          title={"Single Service Pricing Plan"}
-          description={
-            "Our Single Service Plan offers expert solutions for individual digital services, including logo design, promotional videos, and social media content creation."
-          }
-          notifications={services1}
-        />
-        <PricingCard
+        <PricingCard />
+        {/* <PricingCard
           darker={true}
           color={"bg-amber-300"}
           className="border-4 border-amber-300"
@@ -32,7 +24,7 @@ export default function page() {
             "Boost your small business with our Digital Footprint Package, covering logo creation, social media, website development, and more for a cohesive online presence, now with a discount."
           }
           notifications={services2}
-        />
+        /> */}
       </div>
 
       <PricesTable />
