@@ -17,12 +17,14 @@ export default function Home() {
       <div className=" bg-[#F7FBFC] w-full flex justify-center items-center">
         <Identity />
       </div>
+
       <Services />
       <div className=" bg-[#11181e] w-full flex justify-center items-center">
         <AboutUs />
       </div>
       <GetStarted />
-      <div className=" bg-[#11181e] w-full flex justify-center items-center">
+
+      <div className=" bg-[#F7FBFC] w-full flex justify-center items-center">
         <Faq />
       </div>
       <ConnectWithUs />

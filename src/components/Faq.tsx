@@ -1,8 +1,5 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/rmsvo0AzufT
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
+"use client";
+import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
@@ -12,12 +9,18 @@ import {
 
 export default function Component() {
   return (
-    <section className="w-full py-20">
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="w-full py-20 text-slate-900"
+    >
       <div className="container px-4">
         <div className="max-w-3xl mx-auto space-y-4">
           <div className="space-y-2 text-center">
             <h2 className="text-4xl xs:text-5xl font-bold sm:text-4xl">FAQ</h2>
-            <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            <p className=" text-slate-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed ">
               Got a question? We've got answers. If you can't find what you're
               looking for, feel free to get in touch.
             </p>
@@ -62,7 +65,7 @@ export default function Component() {
                   <a
                     target="_blank"
                     href="mailto:phoenixriseteam@gmail"
-                    className="link text-slate-300 ml-1"
+                    className="link text-slate-600 ml-1"
                   >
                     phoenixriseteam@gmail.com
                   </a>
@@ -70,7 +73,7 @@ export default function Component() {
                   - Phone number: +212613506807
                   <br />- Linkedin:{" "}
                   <a
-                    className="text-slate-300 ml-1"
+                    className="text-slate-600 ml-1"
                     target="_blank"
                     href="https://www.instagram.com/phoenixrise.team/"
                   >
@@ -83,6 +86,6 @@ export default function Component() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

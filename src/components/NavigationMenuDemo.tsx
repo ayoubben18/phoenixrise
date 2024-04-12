@@ -49,15 +49,37 @@ const itemVariants = {
 };
 export function Nav() {
   const [open, setOpen] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [navVisible, setNavVisible] = useState(true);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY < lastScrollY) {
+        setNavVisible(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setNavVisible(false);
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   useEffect(() => {
     if (open) {
       setOpen(false);
     }
   }, [pathname]);
-
   return (
-    <div className="sticky w-full flex top-0 py-4 px-10  items-center justify-between   bg-[#0d1317] z-50">
+    <div
+      className={`sticky w-full flex top-0 py-4 px-10 items-center justify-between bg-[#0d1317] z-50 transition-transform duration-300 ${
+        navVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className=" flex  gap-2 items-center">
         <Link href={"/"}>
           <Image src={"/logo.png"} alt="logo" width={50} height={50} />
@@ -168,8 +190,11 @@ export function Nav() {
               <AccordionTrigger>Services</AccordionTrigger>
               <AccordionContent>
                 <motion.div variants={itemVariants}>
-                  <Link href="/services/web-dev" className=" text-xl">
-                    - Web Developemt
+                  <Link
+                    href="/services/web-dev"
+                    className=" text-xl text-slate-300"
+                  >
+                    - Web Development
                   </Link>
                 </motion.div>
               </AccordionContent>
@@ -218,7 +243,7 @@ export function Nav() {
             <AccordionItem value="item-3">
               <AccordionTrigger>More</AccordionTrigger>
               <AccordionContent>
-                <Link href="/pricing" className=" text-xl">
+                <Link href="/pricing" className=" text-xl text-slate-300">
                   - Pricing
                 </Link>
               </AccordionContent>

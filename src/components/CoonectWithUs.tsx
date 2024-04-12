@@ -1,47 +1,71 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/TT2wT0xrfEe
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
+"use client";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function ConnectWithUs() {
   return (
     <section className="w-full py-6 md:py-12">
       <div className="container flex flex-col items-center justify-center gap-4 px-4 text-center md:gap-10 md:px-6">
-        <div className="space-y-2">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="space-y-2"
+        >
           <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
             Connect with Us
           </h2>
           <p className="text-gray-500 md:text-xl/relaxed dark:text-gray-400">
             Follow us on social media.
           </p>
-        </div>
+        </motion.div>
         <div className="grid grid-cols-3 items-center justify-center gap-4 md:gap-8">
-          <Link
-            target="_blank"
-            className="flex h-10 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-950 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-            href="https://www.linkedin.com/company/phoenixriseteam"
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
           >
-            <LinkedinIcon className="w-4 h-4" />
-            <span className="sr-only">LinkedIn</span>
-          </Link>
-          <Link
-            target="_blank"
-            className="flex h-10 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-950 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-            href="https://www.instagram.com/phoenixrise.team/"
+            <Link
+              target="_blank"
+              className="flex h-10 items-center justify-center rounded-md border  border-gray-200 bg-white shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-950 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+              href="https://www.linkedin.com/company/phoenixriseteam"
+            >
+              <LinkedinIcon className="w-4 h-4" />
+              <span className="sr-only">LinkedIn</span>
+            </Link>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            viewport={{ once: true }}
           >
-            <InstagramIcon className="w-10 h-4" />
-            <span className="sr-only">Instagram</span>
-          </Link>
-          <Link
-            target="_blank"
-            className="flex h-10 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-950 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-            href="mailto:phoenixriseteam@gmail"
+            <Link
+              target="_blank"
+              className="flex h-10 items-center justify-center rounded-md border  border-gray-200 bg-white shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-950 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+              href="https://www.instagram.com/phoenixrise.team/"
+            >
+              <InstagramIcon className="w-10 h-4" />
+              <span className="sr-only">Instagram</span>
+            </Link>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            viewport={{ once: true }}
           >
-            <MailIcon className="w-4 h-4" />
-            <span className="sr-only">Email</span>
-          </Link>
+            <Link
+              target="_blank"
+              className="flex h-10 items-center justify-center rounded-md border  border-gray-200 bg-white shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-950 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+              href="mailto:phoenixriseteam@gmail"
+            >
+              <MailIcon className="w-4 h-4" />
+              <span className="sr-only">Email</span>
+            </Link>
+          </motion.div>
         </div>
       </div>
     </section>
