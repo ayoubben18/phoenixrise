@@ -189,12 +189,21 @@ export function Nav() {
             <AccordionItem value="item-1">
               <AccordionTrigger>Services</AccordionTrigger>
               <AccordionContent>
-                <motion.div variants={itemVariants}>
+                <motion.div
+                  variants={itemVariants}
+                  className=" flex flex-col gap-2"
+                >
                   <Link
                     href="/services/web-dev"
                     className=" text-xl text-slate-300"
                   >
                     - Web Development
+                  </Link>
+                  <Link
+                    href="/services/video-editing"
+                    className=" text-xl text-slate-300"
+                  >
+                    - Video Editing
                   </Link>
                 </motion.div>
               </AccordionContent>
