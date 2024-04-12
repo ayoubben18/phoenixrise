@@ -116,7 +116,7 @@ export function Nav() {
                       We design social media content and logos
                     </ListItem>
                     <ListItem
-                      href="/docs/primitives/typography"
+                      href="/services/video-editing"
                       title="Video Editing"
                     >
                       We edit videos and create motion graphics
