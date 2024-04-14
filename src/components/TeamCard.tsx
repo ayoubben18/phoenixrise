@@ -1,5 +1,4 @@
 import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
 import { CardContent, Card } from "@/components/ui/card";
 interface Props {
   image: string;

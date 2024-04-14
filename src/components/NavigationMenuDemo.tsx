@@ -147,7 +147,12 @@ export function Nav() {
         >
           <LinkedinIcon className="text-white" />
         </Link>
-        <InstagramIcon className="text-white" />
+        <Link
+          target="_blank"
+          href={"https://www.instagram.com/phoenixrise_team_/"}
+        >
+          <InstagramIcon className="text-white" />
+        </Link>
       </div>
       <div className="sm:hidden flex ">
         <button onClick={() => setOpen(true)} className="text-white">
@@ -217,7 +222,7 @@ export function Nav() {
                 >
                   {[
                     "https://www.linkedin.com/company/phoenixriseteam",
-                    "https://www.instagram.com/phoenixrise.team/",
+                    "https://www.instagram.com/phoenixrise_team_/",
                     "mailto:phoenixriseteam@gmail",
                   ].map((link, index) => (
                     <Link

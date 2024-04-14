@@ -51,7 +51,10 @@ export const Footer = () => {
             >
               <FaLinkedin size={30} />
             </a>
-            <a>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/phoenixrise_team_/"
+            >
               <FaInstagram size={30} />
             </a>
           </div>
