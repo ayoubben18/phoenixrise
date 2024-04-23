@@ -1,20 +1,16 @@
 import { CodeXml } from "lucide-react";
-import { FaReact } from "react-icons/fa";
+import { Metadata } from "next";
+import { DiMongodb } from "react-icons/di";
+import { FaNodeJs, FaReact } from "react-icons/fa";
+import { RiSupabaseFill } from "react-icons/ri";
+import { SiDotnet, SiPayloadcms, SiTailwindcss, SiTurso } from "react-icons/si";
 import {
   TbBrandNextjs,
+  TbSquareRoundedNumber1Filled,
+  TbSquareRoundedNumber2Filled,
   TbSquareRoundedNumber3Filled,
   TbSquareRoundedNumber4Filled,
 } from "react-icons/tb";
-import { SiTailwindcss, SiTurso } from "react-icons/si";
-import { SiPayloadcms } from "react-icons/si";
-import { SiDotnet } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa";
-import { TbSquareRoundedNumber1Filled } from "react-icons/tb";
-import { TbSquareRoundedNumber2Filled } from "react-icons/tb";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { RiSupabaseFill } from "react-icons/ri";
-import { DiMongodb } from "react-icons/di";
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Web Developement",
