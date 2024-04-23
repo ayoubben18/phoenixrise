@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: "https://phoenixrise.agency/",
       lastModified: new Date(),
-      changeFrequency: "daily",
+      changeFrequency: "weekly",
       priority: 1,
     },
     {
@@ -16,6 +16,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: "https://phoenixrise.agency/services/web-dev",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.5,
+    },
+    {
+      url: "https://phoenixrise.agency/services/video-editing",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.5,
