@@ -1,137 +1,76 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
+  @tailwind components;
+  @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+  @layer base {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 0 0% 3.9%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+      --card: 0 0% 100%;
+      --card-foreground: 0 0% 3.9%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 0 0% 3.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+      --primary: 0 0% 9%;
+      --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+      --secondary: 0 0% 96.1%;
+      --secondary-foreground: 0 0% 9%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+      --muted: 0 0% 96.1%;
+      --muted-foreground: 0 0% 45.1%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+      --accent: 0 0% 96.1%;
+      --accent-foreground: 0 0% 9%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+      --border: 0 0% 89.8%;
+      --input: 0 0% 89.8%;
+      --ring: 0 0% 3.9%;
 
-    --radius: 0.5rem;
+      --radius: 0.5rem;
+    }
+
+    .dark {
+      --background: 0 0% 3.9%;
+      --foreground: 0 0% 98%;
+
+      --card: 0 0% 3.9%;
+      --card-foreground: 0 0% 98%;
+
+      --popover: 0 0% 3.9%;
+      --popover-foreground: 0 0% 98%;
+
+      --primary: 0 0% 98%;
+      --primary-foreground: 0 0% 9%;
+
+      --secondary: 0 0% 14.9%;
+      --secondary-foreground: 0 0% 98%;
+
+      --muted: 0 0% 14.9%;
+      --muted-foreground: 0 0% 63.9%;
+
+      --accent: 0 0% 14.9%;
+      --accent-foreground: 0 0% 98%;
+
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 0 0% 98%;
+
+      --border: 0 0% 14.9%;
+      --input: 0 0% 14.9%;
+      --ring: 0 0% 83.1%;
+    }
   }
 
-  .dark {
-    --background: 212, 26%, 5%; /* Near black with a hint of blue */
-    --foreground: 210, 40%, 98%; /* Bright contrast for text */
-
-    --card: 210, 16%, 15%; /* Very dark grey */
-    --card-foreground: 210, 40%, 98%;
-
-
-
-    --popover: 212, 26%, 5%; /* Matching near black background */
-    --popover-foreground: 210, 40%, 98%;
-
-    --primary: 210, 40%, 98%;
-    --primary-foreground: 212, 26%, 5%; /* Near black text on light buttons */
-
-    --secondary: 210, 16%, 15%; /* Very dark grey for secondary elements */
-    --secondary-foreground: 210, 40%, 98%;
-
-    --muted: 210, 16%, 15%; /* Very dark grey for muted text */
-    --muted-foreground: 210, 20%, 50%; /* Slightly lighter for readable muted text */
-
-    --accent: 210, 40%, 98%; /* Accent color kept light for contrast */
-    --accent-foreground: 212, 26%, 5%; /* Near black for text on accent buttons */
-
-    --destructive: 0, 62.8%, 20%; /* Dark red for destructive actions */
-    --destructive-foreground: 210, 40%, 98%;
-
-    --border: 210, 16%, 15%; /* Very dark grey for borders */
-    --input: 210, 16%, 15%; /* Very dark grey for input fields */
-    --ring: 210, 20%, 30%; /* Darker for focus rings but still visible */
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
   }
-
-
-
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-@keyframes flickerAnimation {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.8; }
-}
-html {
-  scroll-behavior: smooth;
-}
-
-.section-style{
-  @apply flex flex-col gap-6 items-center justify-center min-h-screen tracking-widest py-20
-}
-
-.container-text {
-  box-sizing: border-box; /* This ensures padding is included in the total width and height */
-  width: 100%; /* Adjust the width as needed */
-  height: auto; /* Adjust the height as needed, or set a fixed height */
-  padding: 20px; /* This adds space inside the box around your text */
-  overflow: hidden; /* This prevents the text from overflowing the box */
-  border-radius: 10px; /* Rounds the corners of the box */
-  font-size: 16px; /* Adjust font size as needed */
-  line-height: 1.6; /* Adjust line height for better readability */
-  font-family: 'Roboto', sans-serif;
-  text-align: justify; /* This spreads the text evenly, adjusting spacing as necessary */
-  word-wrap: break-word; /* This will break long words to prevent horizontal overflow */
-}
-
-.title-section{
-  @apply text-5xl font-bold text-slate-300 flex gap-3
-}
-
-@layer utilities {
-  .text-gradient {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(90deg, rgba(209, 213, 219, 0.3) 0%, rgba(255, 255, 255, 0.9) 30%);
-  }
-
-
-
-  .shadow-slate-400 {
-    box-shadow:
-            0 4px 8px -1px rgba(156, 163, 175, 0.9), /* Increase blur radius and opacity */
-            0 2px 6px -2px rgba(156, 163, 175, 0.9), /* More prominent secondary shadow */
-            0 0 0 3px rgba(255, 255, 255, 0.2); /* Add a 'glow' effect */
-  }
-
-  .text-shadow-slate-600 {
-    text-shadow: 0 1px 1px rgba(71, 85, 105, 0.8); /* This RGBA value is for slate-600 */
-  }
-
-  .glowy-bg {
-    filter: drop-shadow(0 35px 60px rgba(156, 163, 175, 0.75));
-    animation: flickerAnimation 3s infinite;
-  }
-
-
-}

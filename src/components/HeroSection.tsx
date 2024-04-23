@@ -27,7 +27,7 @@ const HeroSection: React.FC = () => {
 
   return (
     <motion.section
-      className="w-full z-10 min-h-[calc(100vh-80px)] px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto"
+      className="w-full z-10 min-h-screen px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

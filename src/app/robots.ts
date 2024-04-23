@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/404", "/services/*"],
+      disallow: ["/404"],
     },
     sitemap: "https://phoenixrise.agency/sitemap.xml",
   };
