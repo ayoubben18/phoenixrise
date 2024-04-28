@@ -1,33 +1,27 @@
-import { BackgroundBeams } from "@/components/ui/background-beams";
+import BentoBox from "@/components/BentoBox";
+import BoostPresence from "@/components/BoostPresence";
+import ContactForm from "@/components/ContactForm";
+import ContactUs from "@/components/ContactUs";
 import HeroSection from "@/components/HeroSection";
-import Identity from "@/components/Identity";
-import GetStarted from "@/components/GetStarted";
-import AboutUs from "@/components/AboutUs";
-import Services from "@/components/Services";
-import Faq from "@/components/Faq";
-import ConnectWithUs from "@/components/CoonectWithUs";
+import OurTeam from "@/components/OurTeam";
+import Recomendation from "@/components/Recomendation";
+import UnderHeroSection from "@/components/UnderHeroSection";
 
 export default function Home() {
   return (
-    <main className=" mx-auto flex min-h-screen flex-col items-center justify-between">
-      <div className="relative w-full flex justify-center items-center ">
-        <HeroSection />
-        <BackgroundBeams className="absolute bottom-0" />
+    <main className="flex min-h-screen flex-col gap-10 items-center justify-between ">
+      <HeroSection />
+      <div className=" w-full  bg-gray-100">
+        <UnderHeroSection />
       </div>
-      <div className=" bg-[#F7FBFC] w-full flex justify-center items-center">
-        <Identity />
+      <BoostPresence />
+      <BentoBox />
+      <OurTeam />
+      <div className="bg-gray-100 w-full">
+        <Recomendation />
       </div>
-
-      <Services />
-      <div className=" bg-[#11181e] w-full flex justify-center items-center">
-        <AboutUs />
-      </div>
-      <GetStarted />
-
-      <div className=" bg-[#F7FBFC] w-full flex justify-center items-center">
-        <Faq />
-      </div>
-      <ConnectWithUs />
+      <ContactUs />
+      <ContactForm />
     </main>
   );
 }
