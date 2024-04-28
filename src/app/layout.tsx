@@ -1,30 +1,19 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Footer } from "@/components/Footer";
-import { Nav } from "@/components/NavigationMenuDemo";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 
-const roboto = Roboto({
-  weight: ["400"],
-  style: ["normal"],
+const fontSans = FontSans({
   subsets: ["latin"],
+  variable: "--font-sans",
 });
 export const metadata: Metadata = {
-  metadataBase: new URL("https://phoenixrise.agency/"),
-  title: {
-    default: "PhoenixRise",
-    template: "%s | PhoenixRise",
-  },
-  description: "Digital Services agency",
-  twitter: {
-    card: "summary_large_image",
-  },
-  openGraph: {
-    images: "/og-image.png",
-  },
+  title: "BoostMedia",
+  description:
+    "We're BoostMedia, right here in Morocco. Think of us as your friendly neighborhood team that helps your business get noticed online. Everyone's online these days, and we make sure they find you.",
 };
 
 export default function RootLayout({
@@ -33,24 +22,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="dark">
+    <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background antialiased",
-          roboto.className
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Nav />
-          {children}
-          <Footer />
-          <Toaster />
-        </ThemeProvider>
+        <Nav />
+        {children}
+        <Footer />
+        <Toaster />
       </body>
     </html>
   );
